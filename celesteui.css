@@ -156,6 +156,31 @@ html, body {
 }
 
 /* ───────────────────────────────────
+   🔗 link styles
+   ─────────────────────────────────── */
+a {
+  color: var(--summit-ice);
+  text-decoration: none;
+  text-decoration-thickness: 0px;
+  text-underline-offset: 3px;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+a:hover:not(.btn):not([role="button"]) {
+  color: var(--retro-teal);
+  text-decoration-color: var(--pixel-purple);
+}
+
+a:visited {
+  color: var(--signpost-wood);
+}
+
+a:focus {
+  outline: 2px solid var(--pixel-purple);
+  outline-offset: 2px;
+  border-radius: 2px; }
+  
+/* ───────────────────────────────────
    ✨  global styles
    ─────────────────────────────────── */
 * { box-sizing: border-box; }
@@ -180,7 +205,10 @@ p  { font-size: 18px; line-height: 1.5; }
 .card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: var(--gap);
+  /* padding: var(--gap); */
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  padding-bottom: var(--gap);
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   transition: background var(--transition);
 }
